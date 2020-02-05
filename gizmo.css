@@ -1,0 +1,89 @@
+/*=====================================================
+Typography
+======================================================*/
+
+Html {
+	color: #7b818b;
+	Font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+color: #98c1d9
+ 	text-decoration: none;
+}
+
+a: visited {
+	color: #e4e5e7}
+
+a: hover, a: focus {
+	Color: #c6ddea
+	text-decoration: underline;
+}
+
+/*=====================================================
+Master Page Layout
+======================================================*/
+
+body {
+	Color: #5e6572
+margin: 0 auto;
+	max-width: 40rem;
+}
+
+/*=====================================================
+Images
+======================================================*/
+
+img {
+	max-width: 100%;
+}
+
+
+/*=====================================================
+Figure Component
+======================================================*/
+
+figure {
+	background-color:#F7F8F9;
+	margin: 0;
+	padding: 1rem;
+}
+
+figcaption {
+	margin-top: .5rem;
+}
+
+/*=====================================================
+Nav Primary Component*******
+======================================================*/
+
+.nav-primary {
+	border-top: 1px solid #666;
+	margin-top: 1rem;
+}
+
+
+.nav-primary a {
+	border-bottom: 1px solid #ddd;
+	display: block;
+}
+
+/*=====================================================
+Logo Component
+======================================================*/
+
+.logo {
+	font-size: 2rem;
+}
+
+
+/*=====================================================
+Header Page Component
+======================================================*/
+
+.header-primary {
+	Background-color: #c4c7cb;
+}
+
+
+

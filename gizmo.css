@@ -1,23 +1,60 @@
+/*===========================================
+Colors Variables
+============================================*/
+
+html {
+	--gadget-grey: 		#5e6572;
+	--tool-blue: 		#98c1d9;
+	--safety-first: 	#ee6c4d;
+
+	--grey-shade-light:	#e1e5eb;
+	--grey-shade-dark:	#454a53;
+
+	--blue-shade-light:	#f7f8f9;
+	--blue-shade-dark-standard:	#6f8d9e;
+
+	--red-shade-light:	#f5ae9d;
+	--red-shade-dark:	#ae4f39;
+
+	--font-primary:		'Oswald', Impact, sans-serif;
+	--font-secondary:	'Questrial', Helvetica, Arial, sans-serif;	
+
+}
+
 /*=====================================================
 Typography
 ======================================================*/
 
-Html {
-	color: #7b818b;
-	Font-family: Helvetica, Arial, sans-serif;
+html {
+	color: var(--gadget-grey);
+	font-family: var(--font-primary);
+	background-color: var(--gadget-grey);
 }
 
 a {
-color: #98c1d9
+	color: var(--gadget-grey);
  	text-decoration: none;
+ 	padding: 1rem;
+
 }
 
-a: visited {
-	color: #e4e5e7}
+a:visited {
+	color: var(--gadget-grey);
+}
 
-a: hover, a: focus {
-	Color: #c6ddea
+a:hover, a:focus {
+	color: var(--safety-first);
 	text-decoration: underline;
+}
+
+p {
+	font-family: var(--font-secondary);
+	line-height: 1.5;
+}
+
+h1{
+	text-transform: uppercase;
+
 }
 
 /*=====================================================
@@ -25,9 +62,10 @@ Master Page Layout
 ======================================================*/
 
 body {
-	Color: #5e6572
-margin: 0 auto;
-	max-width: 40rem;
+		background-color: var(--grey-shade-light);
+		margin: 0 auto;
+		max-width: 40rem;
+		padding: 1rem;
 }
 
 /*=====================================================
@@ -44,36 +82,15 @@ Figure Component
 ======================================================*/
 
 figure {
-	background-color:#F7F8F9;
+	background-color: var(--blue-shade-light);
 	margin: 0;
 	padding: 1rem;
+	
+	
 }
 
 figcaption {
 	margin-top: .5rem;
-}
-
-/*=====================================================
-Nav Primary Component*******
-======================================================*/
-
-.nav-primary {
-	border-top: 1px solid #666;
-	margin-top: 1rem;
-}
-
-
-.nav-primary a {
-	border-bottom: 1px solid #ddd;
-	display: block;
-}
-
-/*=====================================================
-Logo Component
-======================================================*/
-
-.logo {
-	font-size: 2rem;
 }
 
 
@@ -81,9 +98,25 @@ Logo Component
 Header Page Component
 ======================================================*/
 
-.header-primary {
-	Background-color: #c4c7cb;
+header {
+	background-color: var(--blue-shade-light);
+	margin: 0 auto;
+	text-transform: uppercase;
+	width: 100%;
+
+	
+
 }
 
+/*=====================================================
+Footer Component
+======================================================*/
+
+footer {
+	background-color: var(--blue-shade-light);
+	margin: 0 auto;
+	text-transform: uppercase;
+	width: 100%;
+}
 
 

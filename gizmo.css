@@ -19,6 +19,13 @@ html {
 	--font-primary:		'Oswald', Impact, sans-serif;
 	--font-secondary:	'Questrial', Helvetica, Arial, sans-serif;	
 
+	--ratio: 1.333;
+	--size-xlarge: calc( var(--size-large) * var(--ratio) );
+	--size-large: calc( var(--size-medium) * var(--ratio) );
+	--size-medium: calc( 1rem * var(--ratio) );
+	--size-small: 1.333;
+	
+
 }
 
 /*=====================================================
@@ -49,23 +56,49 @@ a:hover, a:focus {
 
 p {
 	font-family: var(--font-secondary);
+	font-size: var(--size-small);
 	line-height: 1.5;
+
+}
+
+h1, h2, h3, h4, h5, h5 {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .05em;
+
 }
 
 h1{
-	text-transform: uppercase;
+	font-size: var(--size-xlarge);
+}
 
+h2 {
+	font-size: var(--size-large);
+}
+
+h3 {
+	font-size: var(--size-medium);
 }
 
 /*=====================================================
 Master Page Layout
 ======================================================*/
 
+
+
+main {
+	padding: 2rem;
+}
+
+
 body {
 		background-color: var(--grey-shade-light);
+		font-family: var(--font-secondary);
+		font-size: var(----size-medium);
+		letter-spacing: .01em;
 		margin: 0 auto;
 		max-width: 40rem;
-		padding: 1rem;
+		padding: 2rem;
 }
 
 /*=====================================================
@@ -83,14 +116,78 @@ Figure Component
 
 figure {
 	background-color: var(--blue-shade-light);
+	border: 1px solid var(--blue-shade-dark-standard);
+  	
+  	border-style: solid;
 	margin: 0;
 	padding: 1rem;
-	
 	
 }
 
 figcaption {
 	margin-top: .5rem;
+}
+
+.example-oswald-bold {
+	font-family: var(--font-primary);
+	font-size: var(--font-medium);
+	font-weight: 700;
+}
+
+.example-oswald {
+	font-family: var(--font-primary);
+	font-size: var(--font-medium);
+	font-weight: 400;
+}
+
+
+.example-questrial-bold {
+	font-family: var(--font-secondary);
+	font-size: var(--font-medium);
+	font-weight: 700;
+}
+
+.example-questrial {
+	font-family: var(--font-secondary);
+	font-size: var(--font-medium);
+	font-weight: 300;
+}
+
+
+/*=====================================================
+Quote Component
+======================================================*/
+
+
+
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 50px;
+}
+
+blockquote {
+  background: var(--blue-shade-light);
+  color: var(--blue-shade-dark-standard);
+  padding: 20px 30px 20px 30px;
+  margin: 50px auto;
+  width: 50%;
+  max-width: 500px;
+}
+
+
+.shadow {
+  border: solid 2px ;
+  box-shadow: 15px 15px 0 0 var(--red-shade-light);
+}
+
+cite {
+	font-family: var(--font-primary);
+	text-transform: uppercase;
+
+
+
 }
 
 
@@ -100,12 +197,12 @@ Header Page Component
 
 header {
 	background-color: var(--blue-shade-light);
+	letter-spacing: .05em;
 	margin: 0 auto;
+	padding: .5rem 0 .5rem 0;
+	text-align: center;
 	text-transform: uppercase;
 	width: 100%;
-
-	
-
 }
 
 /*=====================================================
@@ -114,9 +211,24 @@ Footer Component
 
 footer {
 	background-color: var(--blue-shade-light);
+	letter-spacing: .05em;
 	margin: 0 auto;
+	padding: .5rem 0 .5rem 0;
 	text-transform: uppercase;
+	text-align: center;
 	width: 100%;
+}
+
+.footer-info {
+	color: var(--blue-shade-dark-standard);
+	font-size: 12px;
+	line-height: .75;
+	letter-spacing: .05em;
+
+}
+
+ul {
+	padding-inline-start: 0;
 }
 
 

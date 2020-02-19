@@ -11,7 +11,7 @@ html {
 	--grey-shade-dark:	#454a53;
 
 	--blue-shade-light:	#f7f8f9;
-	--blue-shade-dark-standard:	#6f8d9e;
+	--blue-shade-dark-standard:	#516773;
 
 	--red-shade-light:	#f5ae9d;
 	--red-shade-dark:	#ae4f39;
@@ -23,7 +23,9 @@ html {
 	--size-xlarge: calc( var(--size-large) * var(--ratio) );
 	--size-large: calc( var(--size-medium) * var(--ratio) );
 	--size-medium: calc( 1rem * var(--ratio) );
-	--size-small: 1.333;
+	--size-small: .5;
+
+	--margin-standard: 0 auto;
 	
 
 }
@@ -33,25 +35,27 @@ Typography
 ======================================================*/
 
 html {
-	color: var(--gadget-grey);
+	color: var(--blue-shade-dark-standard);
 	font-family: var(--font-primary);
 	background-color: var(--gadget-grey);
 }
 
 a {
-	color: var(--gadget-grey);
+	color: var(--grey-shade-dark);
  	text-decoration: none;
  	padding: 1rem;
 
 }
 
 a:visited {
-	color: var(--gadget-grey);
+	color: var(--blue-shade-dark-standard);
 }
 
 a:hover, a:focus {
 	color: var(--safety-first);
-	text-decoration: underline;
+	text-decoration: none;
+	
+
 }
 
 p {
@@ -80,6 +84,19 @@ h3 {
 	font-size: var(--size-medium);
 }
 
+.featured-text {
+	font-size: var(--size-medium);
+	color: var(--blue-shade-dark-standard);
+	padding: 1rem 2rem;
+
+
+}
+
+.tertiary-text {
+	color: var(--blue-shade-dark-standard);
+	font-size: var(--size-small);
+	font-style: italic;
+}
 /*=====================================================
 Master Page Layout
 ======================================================*/
@@ -96,7 +113,7 @@ body {
 		font-family: var(--font-secondary);
 		font-size: var(----size-medium);
 		letter-spacing: .01em;
-		margin: 0 auto;
+		margin: var(--margin-standard);
 		max-width: 40rem;
 		padding: 2rem;
 }
@@ -109,6 +126,11 @@ img {
 	max-width: 100%;
 }
 
+.site-logo {
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
 
 /*=====================================================
 Figure Component
@@ -116,11 +138,12 @@ Figure Component
 
 figure {
 	background-color: var(--blue-shade-light);
-	border: 1px solid var(--blue-shade-dark-standard);
+	border: 1px solid var(--tool-blue);
   	
-  	border-style: solid;
+  	border-style: dashed;
+  	color: var(--blue-shade-dark-standard);
 	margin: 0;
-	padding: 1rem;
+	padding: 2rem;
 	
 }
 
@@ -159,8 +182,6 @@ Quote Component
 ======================================================*/
 
 
-
-
 .wrapper {
   margin: 0 auto;
   width: 90%;
@@ -185,9 +206,20 @@ blockquote {
 cite {
 	font-family: var(--font-primary);
 	text-transform: uppercase;
+}
 
+/*=====================================================
+List Components
+======================================================*/
 
+ul {
 
+	line-height: 1.2;
+}
+
+ol {
+	line-height: 1.2;
+	list-style-type: upper-roman;
 }
 
 
@@ -198,7 +230,7 @@ Header Page Component
 header {
 	background-color: var(--blue-shade-light);
 	letter-spacing: .05em;
-	margin: 0 auto;
+	margin: var(--margin-standard);
 	padding: .5rem 0 .5rem 0;
 	text-align: center;
 	text-transform: uppercase;
@@ -212,7 +244,7 @@ Footer Component
 footer {
 	background-color: var(--blue-shade-light);
 	letter-spacing: .05em;
-	margin: 0 auto;
+	margin: var(--margin-standard);
 	padding: .5rem 0 .5rem 0;
 	text-transform: uppercase;
 	text-align: center;
@@ -224,11 +256,8 @@ footer {
 	font-size: 12px;
 	line-height: .75;
 	letter-spacing: .05em;
-
 }
 
-ul {
-	padding-inline-start: 0;
-}
+
 
 

@@ -35,7 +35,7 @@ Typography
 ======================================================*/
 
 html {
-	color: var(--blue-shade-dark-standard);
+	color: var(--grey-shade-dark);
 	font-family: var(--font-primary);
 	background-color: var(--gadget-grey);
 }
@@ -48,24 +48,33 @@ a {
 }
 
 a:visited {
-	color: var(--blue-shade-dark-standard);
+	color: var(--gadget-grey);
 }
 
 a:hover, a:focus {
 	color: var(--safety-first);
 	text-decoration: none;
-	
-
 }
 
+a:active {
+	color: var(--tool-blue);
+	}
+
+
+
+	
+
+
+
 p {
+	color: var(--grey-shade-dark);
 	font-family: var(--font-secondary);
-	font-size: var(--size-small);
+	font-size: 1rem;
 	line-height: 1.5;
 
 }
 
-h1, h2, h3, h4, h5, h5 {
+h1, h2, h3, h4, h5, h5, h6 {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: .05em;
@@ -86,7 +95,7 @@ h3 {
 
 .featured-text {
 	font-size: var(--size-medium);
-	color: var(--blue-shade-dark-standard);
+	color: var(--grey-shade-dark);
 	padding: 1rem 2rem;
 
 
@@ -97,10 +106,17 @@ h3 {
 	font-size: var(--size-small);
 	font-style: italic;
 }
+
+.site-logo {
+	font-size: var(--size-xlarge);
+	text-shadow: 2px 2px var(--tool-blue);
+
+}
+
+
 /*=====================================================
 Master Page Layout
 ======================================================*/
-
 
 
 main {
@@ -111,7 +127,6 @@ main {
 body {
 		background-color: var(--grey-shade-light);
 		font-family: var(--font-secondary);
-		font-size: var(----size-medium);
 		letter-spacing: .01em;
 		margin: var(--margin-standard);
 		max-width: 40rem;
@@ -127,8 +142,10 @@ img {
 }
 
 .site-logo {
+	color: var(--grey-shade-dark);
 	letter-spacing: 3px;
 	font-weight: bold;
+
 }
 
 
@@ -141,7 +158,7 @@ figure {
 	border: 1px solid var(--tool-blue);
   	
   	border-style: dashed;
-  	color: var(--blue-shade-dark-standard);
+  	color: var(--grey-shade-dark);
 	margin: 0;
 	padding: 2rem;
 	
@@ -149,6 +166,7 @@ figure {
 
 figcaption {
 	margin-top: .5rem;
+
 }
 
 .example-oswald-bold {
@@ -183,24 +201,25 @@ Quote Component
 
 
 .wrapper {
-  margin: 0 auto;
-  width: 90%;
-  padding-bottom: 50px;
+  	margin: 0 auto;
+  	width: 90%;
+  	padding-bottom: 50px;
 }
 
 blockquote {
-  background: var(--blue-shade-light);
-  color: var(--blue-shade-dark-standard);
-  padding: 20px 30px 20px 30px;
-  margin: 50px auto;
-  width: 50%;
-  max-width: 500px;
+  	background: var(--blue-shade-light);
+  	color: var(--blue-shade-dark-standard);
+  	padding: 20px 30px 20px 30px;
+  	/*margin: 50px auto;*/
+  	margin: 1rem 1rem 1rem 5rem;
+  	max-width: 50%;
+  
 }
 
 
 .shadow {
-  border: solid 2px ;
-  box-shadow: 15px 15px 0 0 var(--red-shade-light);
+  	border: solid 2px ;
+  	box-shadow: 15px 15px 0 0 var(--red-shade-light);
 }
 
 cite {
@@ -213,14 +232,121 @@ List Components
 ======================================================*/
 
 ul {
-
+	color: var(--grey-shade-dark);
 	line-height: 1.2;
+	padding-left: 2rem;
 }
 
 ol {
+	color: var(--grey-shade-dark);
 	line-height: 1.2;
 	list-style-type: upper-roman;
+	padding-left: 2rem;
 }
+
+
+/*=============================================
+Link Button Component
+===============================================*/
+
+.link-button, .link-button:visited{
+    background-color: var(--tool-blue);
+    
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+.link-button:hover, .link-button:focus {
+    background-color: var(--grey-shade-light);
+    box-shadow: .5rem .5rem 1rem rgba( 0, 0, 0, .3 );
+    outline: none;
+    cursor: pointer;
+}
+
+.link-button:active {
+    background-color: var(--blue-shade-light);
+}
+/*////////////*/
+.link-button-hero, .link-button-hero:visited {
+    background-color: var(--gadget-grey);
+    color: var(--grey-shade-light);
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 1.5rem 1.5rem;
+    
+}
+
+.link-button-hero:hover, .link-button-hero:focus {
+	background-color: var(--grey-shade-light);
+	box-shadow: .5rem .5rem 1rem rgba( 0, 0, 0, .3 );
+    outline: none;
+	color: var(--safety-first);
+	cursor: pointer;
+}
+
+.link-button-hero:active {
+    background-color: var(--blue-shade-light);
+}
+
+.link-button-tertiary {
+    background-color: transparent;
+    border: .1rem dashed var(--gadget-grey);
+    border-radius: 1rem 1rem 1rem 1rem;
+    padding: .5rem;
+}
+
+.link-button-tertiary:hover, .link-button-tertiary:focus {
+    background-color: transparent;
+    border-color: var(--red-shade-light);
+    cursor: pointer;
+}
+
+.link-button-tertiary:active {
+    background-color: var(--safety-first);
+
+}
+
+
+
+
+
+/*=====================================================
+Accordions
+======================================================*/
+
+details {
+    margin-bottom: 1.5rem;
+}
+
+summary::-webkit-details-marker {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbTe0A0hgxXBXherWpj78D7awoGBHx8ZmZePP38_4-JpCdqGxp);
+    color: var(--safety-first);
+}
+
+summary:focus, summary:hover {
+    outline: none;
+    cursor: pointer;
+}
+
+summary:focus span {
+    background-color: var(--grey-shade-light);
+}
+
+details div {
+    padding: 2rem;
+}
+
+details[open] {
+    border-bottom: 1px dashed var(--tool-blue);
+    
+}
+
 
 
 /*=====================================================
@@ -231,10 +357,13 @@ header {
 	background-color: var(--blue-shade-light);
 	letter-spacing: .05em;
 	margin: var(--margin-standard);
-	padding: .5rem 0 .5rem 0;
+	padding: 2rem 0 .5rem 0;
 	text-align: center;
 	text-transform: uppercase;
-	width: 100%;
+	
+
+
+
 }
 
 /*=====================================================
@@ -245,15 +374,16 @@ footer {
 	background-color: var(--blue-shade-light);
 	letter-spacing: .05em;
 	margin: var(--margin-standard);
-	padding: .5rem 0 .5rem 0;
+	padding: 1rem 0 .5rem 0;
 	text-transform: uppercase;
 	text-align: center;
-	width: 100%;
+	
+	
 }
 
 .footer-info {
 	color: var(--blue-shade-dark-standard);
-	font-size: 12px;
+	font-size: var(--size-small);
 	line-height: .75;
 	letter-spacing: .05em;
 }

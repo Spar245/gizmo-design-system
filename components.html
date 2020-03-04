@@ -66,21 +66,60 @@
     
 			</details>
 
-						<details>
+			<details>
+    			
     			<summary><span>How can I contact Toolshed?</span></summary>
     
-    			<div>
-    				<ul>
-            			<li>chat</li>
-            			<li>email</li>
-            			<li>phone</li>
-        		</ul>
+    				<div>
+    					<ul>
+            				<li>chat</li>
+            				<li>email</li>
+            				<li>phone</li>
+        				</ul>
 
-    			</div>
+    				</div>
     
 			</details>
 
 		</figure>
+
+		<h2>Modal Dialog</h2>
+
+		<figure>
+			
+			<button id="open-modal" type="button">Open Modal</button>
+
+			<dialog id="modal-demo">
+
+				<h2>Tool Selector</h2>
+
+				<p>The best tool for you're job is a: Circular Saw!</p>
+
+			</dialog>
+
+		</figure>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+
+				const modal = document.querySelector('dialog');
+				const open = document.getElementById('open-modal');
+
+				open.addEventListener('click', () => {
+					modal.showModal();
+				});
+
+				modal.addEventListener('click', event => {
+					if (event.target === modal) {
+							modal.close('cancelled');
+					}
+				});
+
+				});
+		</script>
+
+
+
 
 
 	</main>

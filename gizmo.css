@@ -114,6 +114,7 @@ h3 {
 }
 
 
+
 /*=====================================================
 Master Page Layout
 ======================================================*/
@@ -233,16 +234,22 @@ List Components
 
 ul {
 	color: var(--grey-shade-dark);
-	line-height: 1.2;
-	padding-left: 2rem;
+	line-height: 1.5;
+	padding-left: 0rem;
 }
 
 ol {
 	color: var(--grey-shade-dark);
-	line-height: 1.2;
+	line-height: 1.5;
 	list-style-type: upper-roman;
 	padding-left: 2rem;
 }
+
+.in-main {
+
+	padding-left: 2rem;
+}
+
 
 
 /*=============================================
@@ -309,6 +316,7 @@ Link Button Component
 
 .link-button-tertiary:active {
     background-color: var(--safety-first);
+    color: var(--grey-shade-light);
 
 }
 
@@ -347,6 +355,61 @@ details[open] {
     
 }
 
+/*======================================
+Dialog Component
+=======================================*/
+
+dialog {
+	animation: slide-in-scale .75s ease;
+	background-color: var(--blue-shade-light);
+	box-shadow: 1rem 1rem 0 0 var(--red-shade-light);
+	color: var(--blue-shade-dark-standard);
+	text-align: center;
+
+  	}
+
+
+
+
+dialog::backdrop {
+	animation: opacity 1.5s;
+	background-image: url(https://image.freepik.com/free-vector/wrinkled-paper-texture_1100-12.jpg);
+	background-size: 70%;
+	opacity: .5;
+}
+
+
+
+@keyframes slide-in-scale {
+	
+	0% {
+		opacity: 0;
+		transform: translateY(15rem) scale(1);
+	} 
+
+	50% {
+		opacity: .5;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0rem) scale(1);
+	}
+
+
+
+@keyframes opacity {
+	
+	0% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: .50;
+	}
+	
+}
 
 
 /*=====================================================
@@ -360,11 +423,7 @@ header {
 	padding: 2rem 0 .5rem 0;
 	text-align: center;
 	text-transform: uppercase;
-	
-
-
-
-}
+	}
 
 /*=====================================================
 Footer Component

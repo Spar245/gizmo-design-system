@@ -15,7 +15,7 @@
 		<a href="index.html" class="site-logo">Gizmo Design System</a>
 
 		<nav>
-			<ul style="list-style: none;">
+			<ul class="header-list">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
 				<li><a href="components.html">Components</a></li>
@@ -26,7 +26,7 @@
 	</header>
 
 	<main>
-		<h2>Components</h2>
+		<h1>Components</h1>
 		<h2>Link Buttons</h2>
 
 		<figure>
@@ -44,7 +44,7 @@
 		<figure>
 
 			<details>
-    			<summary><span>How do I choose the right tool for my project?</span></summary>
+    			<summary>How do I choose the right tool for my project?</summary>
     
     			<div>
 
@@ -99,6 +99,57 @@
 
 		</figure>
 
+		<h2>Form Inputs</h2>
+
+		<figure>
+			<form action="subfolder/file.js">
+
+   				<h2>Contact Us!</h2>
+
+   			<div>
+
+       			<label for="user-name">Hello, my name is...</label>
+      			<input type="text" id="user-name" name="name" placeholder="First/Last" class="error">
+
+   			</div>
+
+   			<label for="user-message">Your Message</label>
+			<textarea id="user-message" name="message" placeholder="Enter your message here please. thank you." class="error"></textarea>
+			
+
+			<label for="saw-select">Saw Selection</label>
+			<select id="saw-select" name="saw-select">
+					<option disabled selected hidden>Choose</option>
+					<option>Bow Saw</option>
+					<option>Electric Circular</option>
+					<option>Jigsaw</option>
+			</select>
+
+			<input type="submit" value="Submit!">
+			
+			</form>
+
+		</figure>
+
+
+
+	</main>
+
+	<footer>
+		<p class="footer-info">Gizmo Design System</p>
+		<p class="footer-info">Amanda Sparks - Copyright 2020</p>
+	
+		<nav> 
+			<ul>
+				<a href="http://linkedin.com">LinkedIn</a>
+				<a href="http://google.com">Google</a>
+				<a href="http://behance.com">Behance</a>
+			</ul>
+		</nav>
+
+	</footer>
+
+
 		<script>
 			document.addEventListener('DOMContentLoaded', function(){
 
@@ -120,22 +171,6 @@
 
 
 
-
-
-	</main>
-
-	<footer>
-		<p class="footer-info">Gizmo Design System</p>
-		<p class="footer-info">Amanda Sparks - Copyright 2020</p>
-	
-		<nav> 
-			<ul>
-				<a href="http://linkedin.com">LinkedIn</a>
-				<a href="http://google.com">Google</a>
-				<a href="http://behance.com">Behance</a>
-			</ul>
-
-	</footer>
 
 </body>
 </html>

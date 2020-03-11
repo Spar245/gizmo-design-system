@@ -258,8 +258,7 @@ Link Button Component
 
 .link-button, .link-button:visited{
     background-color: var(--tool-blue);
-    
-    border-radius: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
     box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
     display: inline-block;
     margin-right: 1rem;
@@ -277,11 +276,11 @@ Link Button Component
 .link-button:active {
     background-color: var(--blue-shade-light);
 }
-/*////////////*/
+
 .link-button-hero, .link-button-hero:visited {
     background-color: var(--gadget-grey);
     color: var(--grey-shade-light);
-    border-radius: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
     box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
     display: inline-block;
     margin-right: 1rem;
@@ -304,7 +303,7 @@ Link Button Component
 .link-button-tertiary {
     background-color: transparent;
     border: .1rem dashed var(--gadget-grey);
-    border-radius: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
     padding: .5rem;
 }
 
@@ -375,7 +374,7 @@ dialog::backdrop {
 	animation: opacity 1.5s;
 	background-image: url(https://image.freepik.com/free-vector/wrinkled-paper-texture_1100-12.jpg);
 	background-size: 70%;
-	opacity: .5;
+	opacity: .3;
 }
 
 
@@ -397,7 +396,7 @@ dialog::backdrop {
 		transform: translateY(0rem) scale(1);
 	}
 
-
+}
 
 @keyframes opacity {
 	
@@ -413,6 +412,83 @@ dialog::backdrop {
 
 
 /*=====================================================
+Forms
+======================================================*/
+
+
+form {
+   background-color: var(--blue-shade-light);
+   padding: 2rem calc( (100% - 15rem) / 2 ); /*Should be in 20rem media query*/
+   border: solid 2px var(--red-shade-light);
+   box-shadow: 15px 15px 0 0 var(--tool-blue);
+   text-align: center;
+}
+
+label, input, select, textarea {
+   color: var(--grey-shade-dark);
+   display: block;
+   margin: auto;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+
+}
+
+textarea {
+	background-color: var(--grey-shade-light);
+	min-height: 4rem;
+	}
+
+label:focus, input:focus, select:focus, textarea:focus {
+   background-color: var(--grey-shade-light);
+   
+}
+
+
+[type="text"] {
+	background-color: var(--grey-shade-light);
+}
+
+
+
+/*BUTTON*/
+[type="submit"], button {
+	background-color: var(--gadget-grey);
+    color: var(--grey-shade-light);
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
+    display: inline-block;
+    font-family: var(--font-secondary);
+    font-size: var(--font-medium);
+	margin: 2rem;
+    padding: 1.5rem 1.5rem;
+    text-transform: : uppercase;
+}
+
+[type="submit"]:hover, [type="submit"]:focus, button {
+	background-color: var(--grey-shade-light);
+	box-shadow: .5rem .5rem 1rem rgba( 0, 0, 0, .3 );
+    outline: none;
+	color: var(--safety-first);
+	cursor: pointer;
+
+}
+
+[type="submit"]:active, button {
+	background-color: var(--blue-shade-light);
+}
+
+
+
+/*.error {
+   background-color: var(--grey-shade-light);
+   
+}
+
+
+
+
+
+/*=====================================================
 Header Page Component
 ======================================================*/
 
@@ -424,6 +500,10 @@ header {
 	text-align: center;
 	text-transform: uppercase;
 	}
+
+.header-list {
+	list-style: none;
+}
 
 /*=====================================================
 Footer Component

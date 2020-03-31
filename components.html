@@ -14,7 +14,7 @@
 
 		<a href="index.html" class="site-logo">Gizmo Design System</a>
 
-		<nav>
+		<nav class="nav-primary">
 			<ul class="header-list">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
@@ -131,6 +131,41 @@
 
 		</figure>
 
+		<h2>Navigation</h2>
+
+		<figure>
+
+			<h3>Primary Navigation</h3>
+
+			<nav class="nav-primary">
+				<ul>
+					<li><a href="index.html" class="current-page">Home</a></li>
+					<li><a href="style.html" class="current-page">Style</a></li>
+					<li><a href="components.html" class="current-page">Components</a></li>
+					<li><a href="layout.html" class="current-page">Layout</a></li>
+				</ul>
+			</nav>
+
+			<h3>Secondary Navigation</h3>
+
+			<nav class="nav-secondary">
+				<ul>
+					<li><a href="index.html" class="current-page">Home</a></li>
+					<li class="sub-menu-parent" tab-index="0">
+						<a href="style.html" class="current-page">Style</a>
+						<ul class="sub-menu" class="current-page">
+							<li><a href="#">Style I</a></li>
+							<li><a href="#">Style II</a></li>
+							<li><a href="#">Style III</a></li>
+						</ul>
+					</li>
+
+					<li><a href="components.html" class="current-page">Components</a></li>
+					<li><a href="layout.html" class="current-page">Layout</a></li>
+				</ul>
+			</nav>
+		</figure>
+
 
 
 	</main>
@@ -139,11 +174,11 @@
 		<p class="footer-info">Gizmo Design System</p>
 		<p class="footer-info">Amanda Sparks - Copyright 2020</p>
 	
-		<nav> 
+		<nav class="nav-secondary"> 
 			<ul>
-				<a href="http://linkedin.com">LinkedIn</a>
-				<a href="http://google.com">Google</a>
-				<a href="http://behance.com">Behance</a>
+				<li><a href="http://linkedin.com">LinkedIn</a></li>
+				<li><a href="http://google.com">Google</a></li>
+				<li><a href="http://behance.com">Behance</a></li>
 			</ul>
 		</nav>
 

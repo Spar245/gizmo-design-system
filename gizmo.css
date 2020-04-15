@@ -90,6 +90,7 @@ h2 {
 
 h3 {
 	font-size: var(--size-medium);
+
 }
 
 .featured-text {
@@ -159,7 +160,7 @@ figure {
   	
   	border-style: dashed;
   	color: var(--grey-shade-dark);
-	margin: 0;
+	margin: 1rem;
 	padding: 2rem;
 	
 }
@@ -283,7 +284,6 @@ Link Button Component
     border-radius: 1rem;
     box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
     display: inline-block;
-    margin-right: 1rem;
     padding: 1.5rem 1.5rem;
     
 }
@@ -418,30 +418,60 @@ Forms
 
 form {
    background-color: var(--blue-shade-light);
-   padding: 2rem calc( (100% - 15rem) / 2 ); /*Should be in 20rem media query*/
    border: solid 2px var(--red-shade-light);
    box-shadow: 15px 15px 0 0 var(--tool-blue);
+   padding: 2rem calc( (100% - 15rem) / 2 ); /*Should be in 20rem media query*/
+   margin: 3rem;
    text-align: center;
 }
+
 
 label, input, select, textarea {
    color: var(--grey-shade-dark);
    display: block;
-   margin: auto;
    padding-top: 1rem;
    padding-bottom: 1rem;
+   
 
 }
 
 textarea {
 	background-color: var(--grey-shade-light);
 	min-height: 4rem;
-	}
+
+}
 
 label:focus, input:focus, select:focus, textarea:focus {
    background-color: var(--grey-shade-light);
    
 }
+
+
+.error {
+	color: var(--red-shade-dark);
+	background-color: var(--red-shade-dark);
+	
+}
+
+.disabled {
+	color: var(--grey-shade-light);
+	background-color: var(--grey-shade-light);
+}
+
+form .error {
+	color: var(--red-shade-dark);
+	background-color: var(--red-shade-dark);
+
+}
+
+form .disabled {
+	color: var(--grey-shade-light);
+	background-color: var(--grey-shade-light);
+}
+
+
+
+
 
 
 [type="text"] {
@@ -523,12 +553,10 @@ footer {
 
 
 /*=====================================================
-Media Queries
+Navigation 
 ======================================================*/
 
 
-@media ( min-width: 400px ) {
-	
 html {
 	--ratio: 1.2;
 }
@@ -542,22 +570,14 @@ html {
 	text-transform: uppercase;
 }
 
-
-.nav-primary li {
-	display: block;
-}
-
 .nav-primary a:hover, .nav-primary a:focus { 
-	border-bottom: .1rem dashed;
 	animation: colorChange ease;
 	animation-iteration-count: infinite;
 	animation-duration: 3s;
+	border-bottom: .1rem dashed;
 	padding: .5rem;
  }
  
-
- 
-
 .nav-secondary ul {
 	display: block;
 	margin: 0;
@@ -600,73 +620,71 @@ html {
 
 }
 
-@media ( min-width: 500px ) {
+@media ( min-width: 400px ) {
 
 	html {
 		--ratio: 1.3;
 	}
 
-.nav-primary ul {
+	.nav-primary ul {
 	
-	display: inline;
-	margin: var(--margin-standard);
-	padding: 2rem;
-	list-style-type: none;
-	text-align: center;	
-	text-transform: uppercase;
-}
+		display: inline;
+		margin: var(--margin-standard);
+		padding: 2rem;
+		list-style-type: none;
+		text-align: center;	
+		text-transform: uppercase;
+	}
 
-.nav-primary a:hover, .nav-primary a:focus { 
-	border-bottom: .1rem dashed var(--red-shade-light);
-	padding: 1rem;
- }
+	.nav-primary a:hover, .nav-primary a:focus { 
+		border-bottom: .1rem dashed var(--red-shade-light);
+		padding: 1rem;
+ 	}
 
+	.sub-menu-parent {
+		position: relative;
+	}
 
-.sub-menu-parent {
-	position: relative;
-}
+	.sub-menu-parent:focus .sub-menu,
+	.sub-menu-parent:focus-within .sub-menu,
+	.sub-menu-parent:hover .sub-menu {
+  		visibility: visible; 
+  		z-index: 1;
+  		transform: translateY(0%);
+  		transition-delay: 0s, 0s, 0.3s;  
+ 		visibility: visible; 
+	}
 
-.sub-menu-parent:focus .sub-menu,
-.sub-menu-parent:focus-within .sub-menu,
-.sub-menu-parent:hover .sub-menu {
-  	visibility: visible; 
-  	z-index: 1;
-  	transform: translateY(0%);
-  	transition-delay: 0s, 0s, 0.3s;  
- 	visibility: visible; 
-}
+	.sub-menu {
+		background-color: var(--tool-blue);
+		display: none;
+		list-style-type: none;
+		padding: 3rem;
+		position: absolute;
+		top: 75%;
+		left: 40%;
+		transform: translateY(-2em);
+		z-index: -1;
+		transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+		visibility: hidden;
 
-
-.sub-menu {
-	background-color: var(--tool-blue);
-	display: none;
-	list-style-type: none;
-	padding: 3rem;
-	position: absolute;
-	top: 75%;
-	left: 40%;
-	transform: translateY(-2em);
-	z-index: -1;
-	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-	visibility: hidden;
-
-}
+	}
 
 }
 
 @media (min-width: 800px) {
 
-html {
-	--ratio: 1.5;
-}
+	html {
+		--ratio: 1.5;
+	}
 
-.header-list li {
-	display: inline-block;
-}
+	.header-list li {
+		display: inline-block;
+	}
 
-.nav-primary li {
-	display: inline-block;
-}
+	.nav-primary li {
+		display: inline-block;
+	}
 
 }
 
@@ -676,15 +694,14 @@ Notifications
 
 
 .message-card {
+	align-items: center;
 	background-color: var(--grey-shade-light);
 	border: dashed 2px var(--blue-shade-dark-standard);
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	margin: 1.5rem;
 }
 
-img {
+.message-card img {
 	background-color: var(--blue-shade-light);
 	padding:.5rem;
 	margin: 1rem;
@@ -694,117 +711,87 @@ img {
 /*=====================================================
 Hero Block
 ======================================================*/
-
-@media ( min-width: 500px ) {
+ 
 	.hero-block {
+		align-items: center;
 		background-color: var(--grey-shade-light);
-		border: dashed 2px var(--red-shade-light);
+		border: solid 2px var(--red-shade-light);
 		box-shadow: .5rem .5rem 1rem rgba( 0, 0, 0, .5);
+		color: var(--gadget-grey);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		text-transform: uppercase;
-		color: var(--gadget-grey);
 		margin: 3rem;
+		text-transform: uppercase;
+		
 	}
 
-	h2 {
-		margin: .5rem;
+	.hero-block h2 {
+		margin: 1rem;
 	}
 
-	p {
+	.hero-block p {
 		color: var(--gadget-grey);
 		text-transform: lowercase;
 	}
 
 	.hero-img {
 		background-color: var(--gadget-grey);
-		width: 300px;
+		max-width: 100%;
+		
+
 	}	
-	}
 
-@media (min-width: 800px) {
-	
-	img {
-		width: 400px;
-	}
+	.hero-block .link-button-hero {
+		margin: 1rem;
+		padding: 1rem;
+		
+	} 
+
 }
-
-.link-button-hero, .link-button-hero:visited {
-    background-color: var(--gadget-grey);
-    color: var(--grey-shade-light);
-    border-radius: 1rem;
-    box-shadow: .5rem .5rem 0 rgba( 0, 0, 0, .3 );
-    display: inline-block;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem 1.5rem;
-    
-}
-
-.link-button-hero:hover, .link-button-hero:focus {
-	background-color: var(--grey-shade-light);
-	box-shadow: .5rem .5rem 1rem rgba( 0, 0, 0, .3 );
-    outline: none;
-	color: var(--safety-first);
-	cursor: pointer;
-}
-
-.link-button-hero:active {
-    background-color: var(--blue-shade-light);
-}
-
-
-
-
-
 
 /*=====================================================
-Navigation 
+Cards
 ======================================================*/
 
-/*.nav-primary ul {
-	
-	display: inline;
-	margin: var(--margin-standard);
-	padding: 3rem;
-	list-style-type: none;
-	text-align: center;	
-	text-transform: uppercase;
+.card-post .card-profile .card-call {
+	align-items: center;
+	display: block;
+	max-width: 100%;
+	color: var(--grey-shade-light);
+
 }
 
-.nav-primary li {
-	display: inline-block;
-}
-
-.sub-menu-parent {
-	position: relative;
-}
-
-.sub-menu-parent:focus .sub-menu,
-.sub-menu-parent:focus-within .sub-menu,
-.sub-menu-parent:hover .sub-menu {
-  	visibility: visible; 
-  	z-index: 1;
-  	transform: translateY(0%);
-  	transition-delay: 0s, 0s, 0.3s; 
- 	visibility: visible; 
+.card-post {
+	text-align: center;
+	border: dashed 1px var(--tool-blue);
 }
 
 
-.sub-menu {
-	background-color: var(--tool-blue);
-	display: none;
-	list-style-type: none;
-	position: absolute;
-	top: 75%;
-	left: 40%;
-	transform: translateY(-2em);
-	z-index: -1;
-	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-	visibility: hidden;
+.card-profile {
+	text-align: center;
+	border: dashed 1px var(--tool-blue);
+}
 
-}*/
+.card-call {
+	text-align: center;
+	border: dashed 1px var(--tool-blue);
+}
+
+
+.card-post:hover, .card-profile:hover, .card-call:hover {
+    
+    border: solid 3px var(--tool-blue);
+    box-shadow: .5rem .5rem 0 var(--red-shade-light);
+  	transition: all 0.2s ease-out;
+}
+
+
+.card div {
+	background-color: var(--blue-shade-dark-standard);
+	padding: 1.75rem;
+	text-align: center;
+	color: var(--grey-shade-light);
+}
 
 
 

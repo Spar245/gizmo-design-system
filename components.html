@@ -102,33 +102,100 @@
 		<h2>Form Inputs</h2>
 
 		<figure>
+			<h3>Text Pop-Up</h3>
+			
 			<form action="subfolder/file.js">
+				<h2>Contact Us</h2>
+					<div>
 
-   				<h2>Contact Us!</h2>
+       					<label for="user-name">Hello, my name is...</label>
+      					<input type="text" id="user-name" name="name" placeholder="First/Last" class="contact">
 
-   			<div>
+   					</div>
+   			</form>
 
-       			<label for="user-name">Hello, my name is...</label>
-      			<input type="text" id="user-name" name="name" placeholder="First/Last" class="error">
+   			<form>
+				<h2>Error!</h2>
+   					<div>
 
-   			</div>
+       					<label for="user-name">Hello, my name is...</label>
+      					<input type="text" id="user-name" name="name" placeholder="First/Last" class="error">
 
-   			<label for="user-message">Your Message</label>
-			<textarea id="user-message" name="message" placeholder="Enter your message here please. thank you." class="error"></textarea>
-			
+   					</div>
+   			</form>
 
-			<label for="saw-select">Saw Selection</label>
-			<select id="saw-select" name="saw-select">
-					<option disabled selected hidden>Choose</option>
-					<option>Bow Saw</option>
-					<option>Electric Circular</option>
-					<option>Jigsaw</option>
-			</select>
+   			<form>
+				<h2>Disabled!</h2>
+   					<div>
 
-			<input type="submit" value="Submit!">
-			
+       					<label for="user-name">Hello, my name is...</label>
+      					<input type="text" id="user-name" name="name" placeholder="First/Last" class="disabled">
+
+   					</div>
 			</form>
+   		</figure>
 
+   		<figure>
+   			<h3>Text Area</h3>
+   				<div>
+					<label for="user-message">Your Message</label>
+					<textarea id="user-message" name="message" placeholder="Enter your message here please. thank you." class="standard"></textarea>
+				</div>
+
+				<div>
+					<label for="user-message">Error!</label>
+					<textarea id="user-message" name="message" placeholder="Enter your message here please. thank you." class="error"></textarea>
+				</div>
+
+				<div>
+					<label for="user-message">Disabled!</label>
+					<textarea id="user-message" name="message" placeholder="Enter your message here please. thank you." class="disabled"></textarea>
+				</div>
+		</figure>
+
+
+		<figure>
+		<h3>Select</h3>
+
+			<div>
+				<label for="saw-select">Saw Selection</label>
+					<select id="saw-select" name="saw-select" class=select>
+						<option disabled selected hidden>Choose</option>
+						<option>Bow Saw</option>
+						<option>Electric Circular</option>
+						<option>Jigsaw</option>
+					</select>
+			</div>
+
+				<div>
+				<label for="saw-select">Error!</label>
+					<select id="saw-select" name="saw-select" class=error>
+						<option disabled selected hidden>Choose</option>
+						<option>Bow Saw</option>
+						<option>Electric Circular</option>
+						<option>Jigsaw</option>
+					</select>
+			</div>
+
+				<div>
+				<label for="saw-select">Disabled!</label>
+					<select id="saw-select" name="saw-select" class=disabled>
+						<option disabled selected hidden>Choose</option>
+						<option>Bow Saw</option>
+						<option>Electric Circular</option>
+						<option>Jigsaw</option>
+					</select>
+			</div>
+
+
+		</figure>
+
+		<figure>
+
+			<h3>Submit Button</h3>
+
+				<input type="submit" value="Submit!">
+			
 		</figure>
 
 		<h2>Navigation</h2>
@@ -201,6 +268,67 @@
 		<h2>Hero Component</h2>
 		<figure>
 			<img src="img/ScreenShot.png" alt="hero">
+		</figure>
+
+		<h2>Information Cards</h2>
+
+		<figure>
+			<h3>Article / Post</h3>
+
+			<section class="card-post">
+				<img src="img/Saw.png" alt="saw">
+	
+				<div>
+	
+				<h3>Rotary Saw Class</h3>
+
+				<h4>Rotary Saw: Live Virtual Instruction</h4>
+				<p>Take our introductory course on how to use a Rotary Saw.</p>
+
+				<p>03.17.2020</p>
+		
+				</div>
+				
+			</section>
+		</figure>
+		
+
+		<figure>
+			<h3>Personal / Profile</h3>
+			
+			<section class="card-profile">
+				<img src="img/sid.png" alt="doggo">
+	
+				<div>
+	
+				<h3>Sydney</h3>
+				<p>Department Head of Treats</p>
+				<p>Sydney@toolshed.com</p>
+				<p>512-555-555</p>
+		
+				</div>
+			</section>
+		</figure>	
+
+
+		
+		<figure>
+			<h3>Call to Action</h3>
+
+			<section class="card-call">
+				<img src="img/toolsout.jpg"  alt="tools">
+	
+				<div>
+	
+				<h3>Sign Up Here</h3>
+
+				<p>Start Making Now!</p>
+
+				<a href="https://google.com" class="link-button-hero">Let's Build!</a>
+
+		
+				</div>
+			</section>
 		</figure>
 
 
